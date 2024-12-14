@@ -1,6 +1,4 @@
-// COMPARAÇÕES
-
-// ==, ===, !=, !==
+// COMPARAÇÕES -> (==, ===, !=, !==)
 
 console.log(1 != 2); // diferente
 
@@ -11,7 +9,6 @@ console.log("teste" == "teste");
 
 // incremento 
 let n = 1;
-
 console.log(n);
 console.log(n++); // só incrementa depois
 console.log(n);
@@ -19,4 +16,4 @@ console.log(n);
 console.log(++n); // incrementa na hora
 console.log(--n);
 
-
+n = n + 5 // a mesma coisa que n += 5

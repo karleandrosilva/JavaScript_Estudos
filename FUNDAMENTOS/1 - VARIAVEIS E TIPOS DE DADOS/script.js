@@ -46,3 +46,8 @@ console.log(10 <= 5); // menor ou igual
 console.log(10 == 10); // igual
 
 console.log(10 === "10"); // se o valor e o tipo são iguais
+
+console.log(12 % 2); // módulo -> resto da divisão
+console.log(13 % 2);
+
+console.log(2 ** 2); // exponenciação -> 2 x 2 x 2 = 8
