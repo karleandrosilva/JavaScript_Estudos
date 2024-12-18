@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 06 - Revisão</title>
+</head>
+<body> 
+    <h1>Exercitar</h1>
+    <script>
+        let produto = 'Arroz';
+        let quant = 2;
+        let precoUnitario = 4.99;
+        let precoTotal = quant * precoUnitario
+        
+        document.write(`Preço total é de R$${precoTotal} <br>`);
+        document.write(`<hr>`);
+
+        const nome = 'Karleandro'; 
+        const peso = 60;
+        const altura = 1.78;
+        const imc = peso / (altura * altura);
+        document.write(`IMC: ${imc.toFixed(2)}`);
+        document.write(`<hr>`);
+
+        let nota1 = 7.5;
+        let nota2 = 5.5;
+        let nota3 = 4.0;
+        let notaFinal = nota1 + nota2 + nota3;
+        document.write(`Nota final: ${notaFinal}`)
+        document.write(`<hr>`);
+
+        let compra = 1999.99;
+        let desconto = 145.42;
+        let compraComDesconto = compra - desconto;
+
+        document.write(`A compra deu R$ ${compraComDesconto}`)
+    </script>
+</body>
+</html>
