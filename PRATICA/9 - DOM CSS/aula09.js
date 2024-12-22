@@ -11,7 +11,6 @@ titulo.style.color = '#F0DB4F';
 titulo.style.backgroundColor = 'black';
 titulo.style.width = '300px';
 
-
 let tela = document.querySelector('main');
 
 // seleciona os elementos que tem os botoes
@@ -22,10 +21,11 @@ let botaoLight = document.querySelector('#btlight');
 botaoDark.addEventListener('click', modoDark); // addEventListener -> escutador de eventos
 botaoLight.addEventListener('click', modoLight);
 
+// funcao 
 function modoDark() {
     console.log("Modo Dark ativado");
-    tela.classList.add("dark");
-    tela.classList.remove("light");
+    tela.classList.add("dark"); // adiciona a formatação
+    tela.classList.remove("light"); // retira a formatação
 }
 
 function modoLight() {
