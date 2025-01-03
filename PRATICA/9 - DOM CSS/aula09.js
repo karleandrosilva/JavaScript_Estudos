@@ -3,13 +3,16 @@ titulo.textContent = 'Aula 09 - Manipular CSS'
 
 //  Alteração e mundança de propriedade com CSS
 let image = document.querySelector('#foto');
-image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png') // 
-image.setAttribute('width', '150px');
+image.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png') // imagem
+image.setAttribute('width', '150px'); // largura
+
 
 // Manipular CSS
 titulo.style.color = '#F0DB4F';
-titulo.style.backgroundColor = 'black';
-titulo.style.width = '300px';
+titulo.style.fontSize = '30px';
+titulo.style.backgroundColor = 'black'; //cameCase
+titulo.style.width = '350px';
+
 
 let tela = document.querySelector('main');
 
