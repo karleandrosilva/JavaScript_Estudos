@@ -31,4 +31,22 @@ soma(5,2);
 function soma2(a, b) {
     return a + b;
 }
-document.write(`<p>${soma2(10, 1)}</p>`)
+document.write(`<p>${soma2(10, 1)}</p>`);
+
+// FUNÇÕES ANONIMAS (FUNÇÃO QUE NÃO TEM NOME)
+
+titulo.addEventListener('click', function() {
+    alert('Clicou no titulo');
+})
+
+// ARROW FUNCTIONS -> FUNÇÃO ANONIMA
+const olaMundoArrow = () => {
+    document.write("Olá mundo!!!!!!!!!!");
+}
+
+const olaMundoArrow2 = () => "<p>Olá mundo com arrow function</p>";
+
+olaMundoArrow();
+document.write(olaMundoArrow2());
+
+// document.write -> comando de saída
