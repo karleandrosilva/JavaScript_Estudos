@@ -32,3 +32,21 @@ document.write("<br>");
 frutas.forEach(function(fruta, i) { // com indice
     document.write(`<li>${i} - ${fruta} </li>`);
 })
+
+// WHILE = enquanto
+
+let cont = 0; // precisa criar o contador antes
+
+while (cont < frutas.length) {
+    console.log(frutas[cont]);
+    cont++; // incremento
+}
+
+// DO WHILE = faca enquanto
+
+let interador = 0;
+
+do { // executa pelo menos uma vez
+    console.log(carros[interador]);
+    interador++;
+} while (interador < carros.length)
