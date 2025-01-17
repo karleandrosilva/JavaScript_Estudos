@@ -8,7 +8,7 @@ let cxAltura = document.querySelector('#altura');
 let cxImc = document.querySelector('#resultadoImc');
 
 let aviso = document.querySelector('#aviso');
-let dados = document.querySelector('.pessoa');
+let dados = document.querySelectorAll('.pessoa'); // Para todos os elementos
 
 let btnEnviar = document.querySelector('#btnEnviar');
 let btnLimpar = document.querySelector('#btnLimpar');
@@ -16,8 +16,10 @@ let btnLimpar = document.querySelector('#btnLimpar');
 // PARA PEGAR DADOS QUE ESTÃO DENTRO DAS CAIXAS USE A PROPRIEDADE -> .value
 
 // adiciona um escutador de eventos no botao enviar para criar uma funcao anonima que pega os valores de cada input
-btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
 
+
+
+btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
     //pegar os valores de cada input (.value)
     let nome = cxNome.value;
     let idade = cxIdade.value;
@@ -34,8 +36,8 @@ btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
     console.log(imc);
 
     cxImc.value = imc; // recebe o valor do imc e coloca na caixa do html
-    let situacao = situacaoDoPeso(imc);
-    aviso.textContent = situacao;
+    let sit = situacaoDoPeso(imc);
+    aviso.textContent = sit;
 
     // objeto pessoa 
     let pessoa = {
@@ -53,8 +55,28 @@ btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
     dados[2].textContent = pessoa.idade + " anos"
     dados[3].textContent = pessoa.peso + "Kg"
     dados[4].textContent = pessoa.altura + "m"
-    dados[5].textContent = pessoa.imc + " " + pessoa.sit
+    dados[5].innerHTML = "Situação: " + pessoa.sit + "<br>IMC: " + pessoa.imc
 
     // previni o evento padrão (que da um refresh/carrega na pagina)
-    e.preventDefault() 
+    e.preventDefault();
 }) 
+
+function situacaoDoPeso(imc) {
+    let situacao = ''
+    if (imc < 18) {
+        situacao = 'Abaixo do peso';
+    } else if (imc >= 18 && imc <= 24.9) {
+        situacao = 'Peso Normal';
+    } else if (imc >= 25 && imc <= 29.9) {
+        situacao = 'Sobrepeso';
+    } else if (imc >= 30 && imc <= 34.9) {
+        situacao = 'Obesidade Grau I';
+    } else if (imc >= 35 && imc <= 39.9) {
+        situacao = 'Obesidade Grau II';
+    } else if (imc >= 40) {
+        situacao = 'Obesidade Grau III ou Mórbita';
+    } else {
+        situacao = 'Algo está errado';
+    }
+    return situacao;
+}
