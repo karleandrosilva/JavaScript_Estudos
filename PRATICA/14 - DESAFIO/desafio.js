@@ -36,8 +36,8 @@ btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
     console.log(imc);
 
     cxImc.value = imc; // recebe o valor do imc e coloca na caixa do html
-    let sit = situacaoDoPeso(imc);
-    aviso.textContent = sit;
+    let sit = situacaoDoPeso(imc); // chama a funcao
+    aviso.textContent = sit; // coloca a sitauacao no span avisoS
 
     // objeto pessoa 
     let pessoa = {
