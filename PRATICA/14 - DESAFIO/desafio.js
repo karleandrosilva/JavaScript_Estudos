@@ -17,8 +17,6 @@ let btnLimpar = document.querySelector('#btnLimpar');
 
 // adiciona um escutador de eventos no botao enviar para criar uma funcao anonima que pega os valores de cada input
 
-
-
 btnEnviar.addEventListener ('click', function (e) { // PARAMETRO -> (e)
     //pegar os valores de cada input (.value)
     let nome = cxNome.value;
