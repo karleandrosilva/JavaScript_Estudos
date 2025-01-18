@@ -20,4 +20,23 @@ btnEnviar.addEventListener('click', function (e){
     console.log(media);
     console.log(typeof media);
     cxMedia.value = media;
+
+    let sit = situacaoMedia(media);
+    aviso.textContent = sit;
 })
+
+function situacaoMedia(media) {
+    let situacao = '';
+    if (media >= 7) {
+        situacao = 'Aprovado(a)!';
+        aviso.style.backgroundColor = 'green';
+
+    } else if (media >= 4.59 && media <= 6.99) {
+        situacao = 'Recuperação!';
+        aviso.style.backgroundColor = 'yellow';
+    } else {
+        situacao = 'Reprovado(a)!';
+        aviso.style.backgroundColor = 'red';
+    }
+    return situacao
+}
