@@ -43,6 +43,7 @@ h1 {
 }
 
 #imgDado {
+    margin: 20px;
     width: 200px;
 }
 
@@ -60,12 +61,16 @@ h1 {
 }
 
 #sorteado {
+    padding: 5px;
     background: #311b92;
     color: #fff;
     padding: 5px 10px;
     border-radius: 50%;
     margin-bottom: 0.5rem;
 }
+
+
+    
 
 /* Animar o dado */
 @keyframes mover {
