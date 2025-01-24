@@ -33,6 +33,9 @@ btnSortear.addEventListener('click', function() {
         // define o atributo src com base no numero
         imgDado.setAttribute('src', 'img/dados/'+numeroSorteado+'.png'); // se sair o numero 2, vai aparecer a foto do dado 2
 
+        // define o atributo alt com base no numero
+        imgDado.setAttribute('alt', 'imagem dado número: ' + numeroSorteado); // mostra a informação alt para ter acessibilidade
+
         // exibe o botao sortear
         btnSortear.style.display= 'inline-block';
 
