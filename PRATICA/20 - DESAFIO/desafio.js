@@ -99,3 +99,31 @@ c.textContent = q1.alternativaC;
 a.setAttribute('value', '1A')
 b.setAttribute('value', '1B')
 c.setAttribute('value', '1C')
+
+// função para montar as proximas questoes
+function proximaQuestao(nQuestao) {
+    numero.textContent = nQuestao
+    numQuestao.textContent = questoes[nQuestao].numQuestao
+    pergunta.textContent = questoes[nQuestao].pergunta
+    a.textContent = questoes[nQuestao].alternativaA
+    b.textContent = questoes[nQuestao].alternativaB
+    c.textContent = questoes[nQuestao].alternativaC
+
+    a.setAttribute('value', nQuestao + 'A')
+    b.setAttribute('value', nQuestao + 'B')
+    c.setAttribute('value', nQuestao + 'C')
+}
+
+// metodo para bloquear tentativas
+function bloquearAlternativas() {
+    a.classList.add('bloqueado');
+    b.classList.add('bloqueado');
+    c.classList.add('bloqueado');
+}
+
+// desbloquear
+function desbloquearAlternativas() {
+    a.classList.remove('bloqueado');
+    b.classList.remove('bloqueado');
+    c.classList.remove('bloqueado');
+}
