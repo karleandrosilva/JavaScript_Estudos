@@ -38,6 +38,7 @@ h1 {
     margin: 0.625rem;
 }
 
+
 .centro {
     text-align: center;
 }
@@ -45,7 +46,7 @@ h1 {
 .questao {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #numQuestao {

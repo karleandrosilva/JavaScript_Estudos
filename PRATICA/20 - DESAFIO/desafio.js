@@ -127,3 +127,71 @@ function desbloquearAlternativas() {
     b.classList.remove('bloqueado');
     c.classList.remove('bloqueado');
 }
+
+function verificarSeAcertou(nQuestao, resposta) {
+    
+    let numeroDaQuestao = nQuestao.value
+    console.log('Questão ' + numeroDaQuestao);
+
+    let respotaEscolhida = resposta.textContent
+    console.log('Resposta escolhida ' + respotaEscolhida);
+
+    let certa = questoes[numeroDaQuestao].correta
+    console.log('Ressposta certa ' + certa)
+
+    if (respotaEscolhida == certa) {
+        pontos += 10;
+        console.log('Acertou!');
+    } else {
+        console.log('Errou!');
+    }
+
+    // atualizar pontos
+    placar = pontos
+    instrucoes.textContent = "Pontos " + placar
+
+    // bloquear a escolha de opcoes
+    bloquearAlternativas()
+
+    // para passar para a proxima questao
+    setTimeout(function() {
+        proxima = numeroDaQuestao + 1
+
+        if (proxima > totalDeQuestoes) {
+            console.log('Fim do jogo!')
+            fimDoJogo();
+        } else {
+            proximaQuestao(proxima)
+        }
+
+    }, 250) 
+    desbloquearAlternativas()
+}
+
+function fimDoJogo() {
+    instrucoes.textContent = "Fim de Jogo!"
+    numQuestao.textContent = ""
+
+    let pont = ''
+    pontos == 0 ? pont = 'ponto' : pont = 'pontos'
+
+    pergunta.textContent   = "Você conseguiu " + pontos + " " + pont
+
+    aviso.textContent = "Você conseguiu " + pontos + " " + pont
+
+    a.textContent = ""
+    b.textContent = ""
+    c.textContent = ""
+
+    a.setAttribute('value', '0')
+    b.setAttribute('value', '0')
+    c.setAttribute('value', '0')
+
+    // OCULTAR O ARTICLE DA QUESTAO
+    articleQuestoes.style.display = 'none'
+
+    setTimeout(function() {
+        pontos = 0 // zerar placar
+        location.reload();
+    }, 2000)
+}
