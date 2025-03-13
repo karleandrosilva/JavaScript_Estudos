@@ -7,5 +7,4 @@ alert(`A soma de ${n1} com ${n2} resulta em ${soma}`)
 
 document.write('A soma é ' + soma)
 
-
 document.write(`<br>A soma de ${n1} com ${n2} resulta em ${soma}`)
