@@ -8,7 +8,7 @@
 
         body {
             display: flex;
-            justify-content: center; /* Centraliza horizontalmente */
+            justify-content: center;
             align-items: center; /* Centraliza verticalmente */
             height: 100vh; /* Faz o body ocupar toda a tela */
             margin: 0; /* Remove margens padrão do body */
@@ -31,20 +31,35 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseenter="entrar()">
-        Interaja
+    <div id="area" onclick="clicar()" onmouseenter="entrar()" onmouseout="sair()">
+        Interaja...
     </div>
+
+    <!-- para nã o deixar poluido, tem outra maneira -->
 
     <script>
         var a = document.querySelector('#area');
 
+        // para nao precisar chamar as funcoes no html
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+
         function clicar() {   
             a.innerText = "Clicou";
+            a.style.background = "red";
         }
 
         function entrar () {
             a.innerText = "Entrou";
         }
+
+        function sair() {
+            a.innerHTML="Saiu";
+            a.style.background = "green";
+        } 
+
+
     </script>
 </body>
 </html>
