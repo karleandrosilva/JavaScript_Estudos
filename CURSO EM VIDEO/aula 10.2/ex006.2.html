@@ -17,16 +17,21 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()" onmouseover="entrar()" onmouseout="sair()">
+    <div id="area">
         Interaja
     </div>
 
     <script>
-
         var area = document.querySelector('#area');
+
+        // para deixar o html limpo e fazer tudo no javascript
+        area.addEventListener('click', clicar);
+        area.addEventListener('mouseenter', entrar);
+        area.addEventListener('mouseout', sair);
 
         function clicar() {  
             area.innerText = "Clicou!";
+            area.style.background = "red";
         }
 
         function entrar() {
@@ -35,6 +40,7 @@
 
         function sair() {
             area.innerHTML = "Saiu!"
+            area.style.background = "green";
         }
 
     </script>

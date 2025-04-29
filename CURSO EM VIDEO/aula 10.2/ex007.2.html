@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando Número</title>
+    <style>
+        body {
+            font: normal 18pt Arial;
+        }
+
+        input {
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Somando Valores</h1>
+
+    <input type="number" id="txt1" name="txt1"> +
+    <input type="number" id="txt2" name="txt2">
+
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="resultado"></div>
+
+    <script>
+        function somar() {
+            var resposta = document.querySelector("#resultado")
+            var txt1 = document.querySelector("#txt1");
+            var txt2 = document.querySelector("#txt2");
+
+            // converter de string para inteiro
+            var n1 = Number(txt1.value)
+            var n2 = Number(txt2.value)
+            soma = n1 + n2
+            resposta.innerHTML = `A soma entre ${n1} e ${n2} é igual a ${soma}`;
+        }
+    </script>
+</body>
+</html>
