@@ -1,17 +1,17 @@
-// estrutura para o usuario digitar no termianal 
-const r = require("node:readline");
-const prompt = r.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-})
+// variaveis: const - let - var
+// var = variavel global
 
-let name;
+// const = variavel constante, não pode ser alterada
+const nome1 = "Karle";
+console.log(nome1);
 
-prompt.question("Qual o seu nome: ", aswer => { 
-    name = aswer;
-    prompt.close();
-})
+// let = variavel local
+let nome = "Karle";
+console.log(nome);
+nome = "Karleandro";
+console.log(nome);
 
-prompt.on("close", () =>{
-    console.log("Seja bem vindo,", name);
-})
+// recomendado utilizar const e let
+
+// boas praticas de variaveis
+const meuNome = "Karleandro"; // camelCase
