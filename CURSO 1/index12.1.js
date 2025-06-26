@@ -29,4 +29,3 @@ while (current !== excpected) {
 }
 
 console.log(`Foram necessárias ${times} tentativas para chegar ao número ${excpected}.`); // Exibe o número de tentativas
-    
