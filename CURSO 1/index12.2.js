@@ -27,3 +27,5 @@ while (c <= 10) {
     console.log(c, "é impar!");
 }
 
+// break = o codigo vai sair do loop
+// continue = o codigo vai voltar para o comeco do loop e ignorar o que vem após o continue
