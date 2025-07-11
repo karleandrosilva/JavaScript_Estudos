@@ -10,7 +10,7 @@
 
 // pode chamar a variavel pelo nome que quiser, mas é bom manter o mesmo nome do arquivo
 // require = é uma funçao global do node.js que importa módulo
-const math = require("./10 - módulos/functions/math") // passa o caminho do arquivo que deseja importar
+const math = require("./functions/math") // passa o caminho do arquivo que deseja importar
 
 // tambem pode usar a desestruturação para importar somente o que for necessário
 // const { sum } = require("./10 - módulos/functions/math") /
