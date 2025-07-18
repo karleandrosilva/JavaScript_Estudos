@@ -6,7 +6,7 @@
 
 // para importar, basta usar a palavra import
 
-import { sum, sub } from "./10 - módulos/functions/math3.js" // passa o caminho do arquivo que deseja importar
+import { sum, sub } from "./functions/math3.js" // passa o caminho do arquivo que deseja importar
 
 console.log("A soma é: " + sum(10, 5));
 console.log("A subtração é: " + sub(10, 5));
