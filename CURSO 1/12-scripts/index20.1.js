@@ -12,3 +12,5 @@
 
 console.log(process.env.EMAIL);
 console.log(process.env.PASSWORD);
+
+// "start": "node --env-file .env 12-scripts/index20.1.js"
