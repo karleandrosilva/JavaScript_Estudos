@@ -4,8 +4,8 @@
 
 // . e ./ = esta acessando o mesmo diretório do arquivo
 
-import { sub } from "./functions/math/sub.js"
-import { sum } from "./functions/math/sum.js"
+import { sub } from "../functions/math/sub.js"
+import { sum } from "../functions/math/sum.js"
 
 console.log(sub(10, 5));
 console.log(sum(10,5));
